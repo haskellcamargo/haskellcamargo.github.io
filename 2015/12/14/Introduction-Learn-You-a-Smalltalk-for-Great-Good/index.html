@@ -1,0 +1,494 @@
+
+ <!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Introduction · Learn You a Smalltalk for Great Good | Haskell Camargo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Marcelo Haskell Camargo">
+    
+
+    
+    <meta name="description" content="About this tutorialHello, dude! I’m writing this for a bunch of reasons. The first thing I want to do is to apologize for my awful drawings on the pages. After, I believe you may expect this to be ser">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction · Learn You a Smalltalk for Great Good">
+<meta property="og:url" content="http://haskellcamargo.github.io/2015/12/14/Introduction-Learn-You-a-Smalltalk-for-Great-Good/index.html">
+<meta property="og:site_name" content="Haskell Camargo">
+<meta property="og:description" content="About this tutorialHello, dude! I’m writing this for a bunch of reasons. The first thing I want to do is to apologize for my awful drawings on the pages. After, I believe you may expect this to be ser">
+<meta property="og:image" content="http://haskellcamargo.github.io/assets/learn_you_smalltalk_1_1.png">
+<meta property="og:image" content="http://haskellcamargo.github.io/assets/learn_you_smalltalk_1_2.png">
+<meta property="og:image" content="http://haskellcamargo.github.io/assets/learn_you_smalltalk_1_3.png">
+<meta property="og:updated_time" content="2015-12-15T00:51:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction · Learn You a Smalltalk for Great Good">
+<meta name="twitter:description" content="About this tutorialHello, dude! I’m writing this for a bunch of reasons. The first thing I want to do is to apologize for my awful drawings on the pages. After, I believe you may expect this to be ser">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Haskell Camargo" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Haskell Camargo" title="Haskell Camargo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Haskell Camargo">Haskell Camargo</a></h1>
+				<h2 class="blog-motto">I&#39;m not that bad!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/talks">Talks</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:haskellcamargo.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/12/14/Introduction-Learn-You-a-Smalltalk-for-Great-Good/" title="Introduction · Learn You a Smalltalk for Great Good" itemprop="url">Introduction · Learn You a Smalltalk for Great Good</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Marcelo Haskell Camargo" target="_blank" itemprop="author">Marcelo Haskell Camargo</a>
+		
+  <p class="article-time">
+    <time datetime="2015-12-14T22:20:01.000Z" itemprop="datePublished"> Published 2015-12-14</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#About_this_tutorial"><span class="toc-number">1.</span> <span class="toc-text">About this tutorial</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What_in_the_world_is_Smalltalk_3F"><span class="toc-number">2.</span> <span class="toc-text">What in the world is Smalltalk?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generically_2C_what_is_object-oriented_programming_3F"><span class="toc-number">3.</span> <span class="toc-text">Generically, what is object-oriented programming?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What_do_I_need_to_3F"><span class="toc-number">4.</span> <span class="toc-text">What do I need to?</span></a></li></ol>
+		
+		</div>
+		
+		<h3 id="About_this_tutorial"><a href="#About_this_tutorial" class="headerlink" title="About this tutorial"></a>About this tutorial</h3><div style="text-align: justify"><br>Hello, dude! I’m writing this for a bunch of reasons. The first thing I want to do is to apologize for my awful drawings on the pages. After, I believe you may expect this to be series of concise articles for begginers, such as <strong>Learn You a Haskell for Great Good</strong> or <strong>Learn You Some Erlang for Great Good</strong>. The main reason that guides me to this is that the amount of content about Smalltalk is small and it is very hard to find solutions for common problems on the Internet. These articles mean to provide helpful content for begginers and make it easy to somebody to learn pure object orientation and have a good domain on Smalltalk. For sure, this isn’t meant to be the supreme source source of wisdom over Smalltalk, because you can’t learn it all about a programming from a single resource (with some exceptions, for sure). I also hope to improve my knowledge about Smalltalk and object orientation in essence, because one of the best ways to learn is to teach.<br></div>
+
+<p><img src="/assets/learn_you_smalltalk_1_1.png" style="float: left; padding: 25px;" draggable="false"></p>
+<div style="text-align: justify"><br>Ok, but, for whom is this tutorial made? Well, this has been made for everybody who wants to learn programming or wants to learn the real object orientation concepts. You don’t need to have previous knowledge in programming to learn Smalltalk. It is trivial! When you see how simple it can be, you may be able to really learn other programming languages that bel ongs to the same paradigm, since <em>Self</em> up to <em>Ruby</em>, where there are a lot of stuff in common! Unfortunately, at this point, there is no much way where you can settle your doubts. Don’t hesitate to <a href="mailto:marcelocamargo@linuxmail.org" target="_blank" rel="external">contact me</a> if you are stuck. <strong>StackOverflow</strong> may also be a good data source.<br></div>
+
+<h3 id="What_in_the_world_is_Smalltalk_3F"><a href="#What_in_the_world_is_Smalltalk_3F" class="headerlink" title="What in the world is Smalltalk?"></a>What in the world is Smalltalk?</h3><p><img src="/assets/learn_you_smalltalk_1_2.png" style="float: right; padding: 25px;" draggable="false"></p>
+<div style="text-align: justify"><br>Smalltalk is a <strong>purely object oriented programming language</strong>, dynamic typed and reflective. But, what in the world does all this mean? Keep calm, we’ll reach there. First, let’s go back to Smalltalk origins. Smalltalk was created in order to abstract the real world programming, with great part in educational uses. it arose in the <em>Learning Research Group</em> of <strong>Xerox</strong>, on 70s. The main responsible by the geral concept has been <em>Alan Kay</em>, whom created the definition of object orientation, which was misrepresented in the current days. The first release of Smalltalk was Smalltalk-80, and several modern languages were influenced by it, such as Objective-C, PHP, Dylan, Scala, Ruby, Python, Io and also indirectly Java!<br></div>
+
+<p><img src="/assets/learn_you_smalltalk_1_3.png" style="float: left; padding: 25px;" draggable="false"></p>
+<div style="text-align: justify"><br>Although the first general release was Smalltalk-80, the language is older. As the product of the research of Alan Kay, at Xerox, arose Smalltalk-71, and it was created surprisingly ina few mornings while trying to create a programming language based on the simple idea of <strong>message passing</strong>, inspired by Simula, and that could be implemented, in a generic way, <em>in one single page of code</em>. A later version, Smalltalk-72, was influenced by more advanced concepts, such as Actor model. The syntax has changed a lot since that, and modern Smalltalk is very different from the first version. As Smalltalk-76, happened significative revisions, keeping the grammar a bit more similar with what we have today, and with a great performance optimization. This version included a whole branch of tools, such as a code browser and editor. The most known version of Smalltalk, called Smalltalk-80, added support for metaclasses. You may be confused now, but later this all will make sense to you. With this, everything was kept as <strong>an object</strong> (unfortunately, except for private instance variables, dah!), and the object orientation paradigm started to grow, with base on association of properties and behaviors with a class-based system.<br><br>In Smalltalk, even primitives, such as integers, strings and booleans, are objects! It is a bit different from most of the modern programming languages. There are no common structures, such as <code>if</code>, <code>while</code> or <code>for</code>, neither operators per se. Everything happens by message passing! We’ll dive into this concept soon, calm down, dude!<br></div>
+
+<h3 id="Generically_2C_what_is_object-oriented_programming_3F"><a href="#Generically_2C_what_is_object-oriented_programming_3F" class="headerlink" title="Generically, what is object-oriented programming?"></a>Generically, what is object-oriented programming?</h3><h3 id="What_do_I_need_to_3F"><a href="#What_do_I_need_to_3F" class="headerlink" title="What do I need to?"></a>What do I need to?</h3>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/smalltalk/">smalltalk</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://haskellcamargo.github.io/2015/12/14/Introduction-Learn-You-a-Smalltalk-for-Great-Good/" data-title="Introduction · Learn You a Smalltalk for Great Good | Haskell Camargo" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/10/13/Introduction-to-SPL-Types/"  title="Introduction to SPL Types">
+ <strong>Next:</strong><br/>
+ <span>Introduction to SPL Types
+</span>
+</a>
+</div>
+
+</nav>
+
+
+	
+
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#About_this_tutorial"><span class="toc-number">1.</span> <span class="toc-text">About this tutorial</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What_in_the_world_is_Smalltalk_3F"><span class="toc-number">2.</span> <span class="toc-text">What in the world is Smalltalk?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generically_2C_what_is_object-oriented_programming_3F"><span class="toc-number">3.</span> <span class="toc-text">Generically, what is object-oriented programming?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What_do_I_need_to_3F"><span class="toc-number">4.</span> <span class="toc-text">What do I need to?</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github</p>
+<div class="github-card" data-github="haskellcamargo" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/php/" title="php">php<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/smalltalk/" title="smalltalk">smalltalk<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+    </ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> A functional programming shiite in love with <br/>
+			programming languages theory and capybaras.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/haskellcamargo" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		<a href="http://stackoverflow.com/users/3825483" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
+		
+		
+		
+		<a href="https://www.facebook.com/haskellcamargo" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/haskellcamargo" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		
+		
+		<a href="mailto:marcelocamargo@linuxmail.org" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/by/4.0" class="cc-opacity" target="_blank">
+            <img src="/img/cc-by.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Marcelo Haskell Camargo">Marcelo Haskell Camargo</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+<script type="text/javascript">
+
+var disqus_shortname = 'haskellcamargo';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-68782210-1', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
